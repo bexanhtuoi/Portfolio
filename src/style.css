@@ -1,7 +1,8 @@
 * {
-  text-decoration: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
   border: none;
   font-family: "Poppins", sans-serif;
 }
@@ -10,6 +11,7 @@
   --bg-color: rgb(0, 0, 0);
   --second-bg-color: rgb(57, 54, 54);
   --text-color: white;
+  --second-text-color: rgb(255, 227, 186);
   --main-color: aqua;
 }
 html {
@@ -38,30 +40,32 @@ header {
   color: var(--text-color);
 }
 nav {
-  margin-right: 150px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 nav a {
   font-size: 2rem;
   color: var(--text-color);
-  margin-right: 50px;
 }
-nav a:hover,
-nav a.active {
-  color: var(--main-color);
+
+.items:hover > .items:not(:hover) {
+  color: black;
 }
 
 .Home {
   position: relative;
   min-height: 100vh;
   display: grid;
+  padding: 0;
 }
 Section {
   position: relative;
-  min-height: 110vh;
+  height: 110vh;
+  padding: 10rem 9% 2rem;
 }
-.About {
-  background-color: var(--second-bg-color);
-}
+
 .Skill {
   background-color: var(--second-bg-color);
 }
@@ -91,7 +95,7 @@ Section {
   grid-column: 2 / 15;
   grid-row: 2 / 4;
   font-size: 3rem;
-  width: 500px;
+  width: 450px;
   height: 200px;
 }
 .text h1 {
@@ -104,7 +108,182 @@ Section {
 .text h3 {
   font-size: 3.5rem;
 }
+.text h3 span {
+  font-size: 3.5rem;
+  color: var(--second-text-color);
+}
 .text p {
   font-size: 2rem;
   line-height: 1.5;
+  margin-bottom: 3rem;
+}
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+
+.social-media a {
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-style: outset;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.social-media a:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 1rem var(--text-color);
+}
+.cv {
+  border-style: outset;
+  padding: 1rem 2.8rem;
+  border-radius: 50px;
+  font-size: 2rem;
+  color: var(--bg-color);
+  box-shadow: 0 0 1rem var(--text-color);
+  background-color: var(--text-color);
+  font-weight: 600;
+}
+.cv:hover {
+  box-shadow: none;
+}
+.About {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6em;
+}
+.img-seft {
+}
+.img-seft img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  box-shadow: 30px 0px 200px rgb(255, 225, 205);
+}
+.about-text h2 {
+  font-size: 4.5em;
+  margin-bottom: 0.1em;
+}
+.about-text h2 span {
+  color: var(--second-text-color);
+}
+.about-text h3 {
+  font-size: 3em;
+  margin-bottom: 2em;
+}
+.about-text p {
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+.about-text a {
+  padding: 1rem 2.8rem;
+  border-style: outset;
+  font-size: 2rem;
+  box-shadow: 0 0 1rem var(--text-color);
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.about-text a:hover {
+  box-shadow: none;
+}
+.Education {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.edu-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50rem;
+}
+.line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 0px;
+  height: 50rem;
+  border-style: solid;
+  border-color: #fff;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 5rem;
+}
+.line a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-color: #fff;
+  border-style: solid;
+}
+.edus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-style: outset;
+  padding: 10%;
+  font-size: 1.2rem;
+  width: 400px;
+  height: 110px;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+.edus:hover {
+  transform: scale(1.05, 1.05);
+  animation: li 1s linear;
+}
+@keyframes li {
+}
+.edus h2 {
+  color: var(--second-text-color);
+}
+.edu-left {
+  height: 50rem;
+}
+.edu-right {
+  height: 50rem;
+  bottom: 0rem;
+}
+.tex-journey {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 110px;
+  font-size: 2.5rem;
+}
+.my-journey-2 {
+  margin-left: 10px;
+  background: linear-gradient(90deg, rgb(0, 113, 234), rgb(255, 0, 247));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#tranphu {
+  margin-top: 14rem;
+}
+#hue {
+  margin-top: 1rem;
+}
+#cva {
+  margin-top: 13rem;
+}
+#daison {
+  margin-top: 14rem;
 }
