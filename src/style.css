@@ -4,7 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   border: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
 }
 
 :root {
@@ -66,7 +66,7 @@ Section {
   padding: 10rem 9% 2rem;
 }
 
-.Skill {
+.Projects {
   background-color: var(--second-bg-color);
 }
 .circle {
@@ -201,6 +201,7 @@ Section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 .edu-parent {
   display: flex;
@@ -208,6 +209,7 @@ Section {
   align-items: center;
   flex-direction: row;
   height: 50rem;
+  width: 70%;
 }
 .line {
   display: flex;
@@ -241,8 +243,8 @@ Section {
   border-style: outset;
   padding: 10%;
   font-size: 1.2rem;
-  width: 400px;
   height: 110px;
+  min-width: 200px;
   border-radius: 2rem;
   margin-bottom: 2rem;
 }
@@ -257,10 +259,11 @@ Section {
 }
 .edu-left {
   height: 50rem;
+  width: 50%;
 }
 .edu-right {
+  width: 50%;
   height: 50rem;
-  bottom: 0rem;
 }
 .tex-journey {
   display: flex;
@@ -286,4 +289,39 @@ Section {
 }
 #daison {
   margin-top: 14rem;
+}
+.Skill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.skil-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+  font-size: 2.5rem;
+}
+.skill-children {
+  width: 100%;
+  height: 80%;
+  border: #ff0000;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+}
+.lang-skill {
+  width: 45%;
+  border: #1d96ff;
+  border-style: solid;
+  padding: 3%;
+}
+.soft-skill {
+  padding: 3%;
+  width: 45%;
+  border: #fff;
+  border-style: solid;
 }
